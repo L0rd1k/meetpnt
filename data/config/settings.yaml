@@ -1,0 +1,14 @@
+# Database
+database:
+  dialect:    "mysql"
+  host:       "localhost"
+  port:       8099
+  username:   "admin"
+  password:   "root"
+  name:       "meetpnt"
+  charset:    "utf8"
+
+# Server
+server:
+  host:          "localhost"
+  port:       8000
