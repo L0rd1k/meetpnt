@@ -2,13 +2,13 @@
 database:
   dialect:    "mysql"
   host:       "localhost"
-  port:       8099
-  username:   "admin"
-  password:   "root"
+  port:       3306
+  username:   "root"
+  password:   "1234"
   name:       "meetpnt"
   charset:    "utf8"
 
 # Server
 server:
-  host:          "localhost"
+  host:       "localhost"
   port:       8000

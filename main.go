@@ -1,22 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"github.com/L0rd1k/meetpnt/app"
 )
 
-func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello\n")
-}
-
-func headers(w http.ResponseWriter, req *http.Request) {
-	for name, headers := range req.Header {
-		for _, h := range headers {
-			fmt.Fprintf(w, "%v: %v\n", name, h)
-		}
-	}
-}
-
 func main() {
+	app := app.NewApp()
+	app.Init()
 	// cfg := config.NewConfig("settings")
 }

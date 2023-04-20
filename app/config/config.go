@@ -1,6 +1,8 @@
 package config
 
 import (
+	"log"
+
 	"github.com/spf13/viper"
 )
 
@@ -43,8 +45,8 @@ func (cfg *Config) ExtractConfigData() {
 	cfg.DataBase.Charset = viper.GetString("database.charset")
 
 	// Server info
-	cfg.Server.Host = viper.GetString("database.host")
-	cfg.Server.Port = viper.GetInt("database.port")
+	cfg.Server.Host = viper.GetString("server.host")
+	cfg.Server.Port = viper.GetInt("server.port")
 
 }
 
@@ -57,7 +59,7 @@ func (cfg *Config) SetDefaultConfig() {
 func (cfg *Config) IsOpened() bool {
 	err := viper.ReadInConfig()
 	if err != nil {
-		panic(err)
+		log.Fatal("Error: Can't open config file:", err)
 	}
 	return true
 }
